@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Web</title>
+    <link rel="stylesheet" href="pw.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <form>
+            <label for="areas">Area:</label>
+            <select id="areas" name="areas" onchange="checkOption()">
+                <option value="Callcenter">Callcenter</option>
+                <option value="Afiliaciones y cartera">Afiliaciones y cartera</option>
+                <option value="Atencion al afiliado">Atencion al afiliado</option>
+                <option value="Contabilidad">Contabilidad</option>
+                <option value="mas">agregar area +</option>
+            </select>
+        </form>
+        <button onclick="updateLosa()">Actualizar Losa</button>
+    </div>
+   
+    <div style="border: solid 1px #000000;"></div>
+
+    <script src="pw.js"></script>
+    <script>
+
+        function checkOption() {
+            const select = document.getElementById('areas');
+            if (select.value === 'mas') {
+                const fileName = prompt('Introduce el nombre del archivo:');
+                const area = prompt('Introduce el área:');
+                const total_losas = prompt('Introduce el total de losas (espacio)');
+
+                if (fileName && area && total_losas) {
+                    const data = {
+                        fileName,
+                        area,
+                        total_losas: parseInt(total_losas, 10)
+                    };
+
+                    fetch('/create-file', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.text())
+                        .then(data => alert(data))
+                        .catch(error => console.error('Error:', error));
+                }
+            }
+        }
+
+        function updateLosa() {
+            const fileName = prompt('Introduce el nombre del archivo:');
+            const losa = prompt('Introduce la losa a actualizar (por ejemplo, l1, l2, etc.):');
+            const estado = prompt('Introduce el nuevo estado (opcional):');
+            const ip = prompt('Introduce la nueva IP (opcional):');
+            const MAC = prompt('Introduce la nueva MAC (opcional):');
+            const nombre_equipo = prompt('Introduce el nuevo nombre del equipo (opcional):');
+
+            const data = {
+                fileName,
+                losa
+            };
+
+            if (estado) data.estado = estado;
+            if (ip) data.ip = ip;
+            if (MAC) data.MAC = MAC;
+            if (nombre_equipo) data.nombre_equipo = nombre_equipo;
+
+            fetch('/update-losa', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        }
+    
+    </script>
+</body>
+
+</html>
