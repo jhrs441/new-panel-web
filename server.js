@@ -24,7 +24,7 @@ app.post('/create-file', (req, res) => {
     // Crear losas automáticamente
     const losas = {};
     for (let i = 1; i <= total_losas; i++) {
-        losas[`l-${i}`] = [{ estado: "0" }];
+        losas[`losa-${i}`] = [{ estado: "0" }];
     }
 
     const testData = {

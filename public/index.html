@@ -22,8 +22,44 @@
         </form>
         <button onclick="updateLosa()">Actualizar Losa</button>
     </div>
-   
-    <div style="border: solid 1px #000000;"></div>
+
+    <div id="contenedor_losas" class="full-size">
+        <!-- <div class="fila">
+            <div id="l1" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l2" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l3" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l4" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l5" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l6" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l7" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l8" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l9" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l10" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l11" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l12" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l13" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l14" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l15" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+        </div>
+        <div class="fila">
+            <div id="l1" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l2" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l3" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l4" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l5" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l6" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l7" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l8" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l9" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l10" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l11" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l12" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l13" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l14" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+            <div id="l15" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
+        </div> -->
+
+    </div>
 
     <script src="pw.js"></script>
     <script>
@@ -85,7 +121,34 @@
                 .then(data => alert(data))
                 .catch(error => console.error('Error:', error));
         }
-    
+
+
+        function generarCubiculos() {
+            const contenedor = document.getElementById('contenedor_losas');
+
+            for (let i = 0; i < 20; i++) {
+                const fila = document.createElement('div');
+                fila.className = 'fila';
+
+                for (let j = 1; j <= 15; j++) {
+                    const cubiculo = document.createElement('div');
+                    cubiculo.id = `losa-${i * 15 + j}`;
+                    cubiculo.className = 'cubiculo';
+                    cubiculo.setAttribute('data-estado', '0');
+                    cubiculo.setAttribute('data-eq', '');
+                    cubiculo.setAttribute('data-mac', '');
+
+                    fila.appendChild(cubiculo);
+                }
+
+                contenedor.appendChild(fila);
+            }
+        }
+
+        // Llamar a la función para generar los cubículos
+        generarCubiculos();
+
+
     </script>
 </body>
 

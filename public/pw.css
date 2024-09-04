@@ -1,11 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #808D7C;
+    background-color: #000000;
+    color: #DDE6ED;
 }
 
 .top-bar {
-    background-color: #5F6F65;
+    background-color: #526D82;
     overflow: hidden;
     padding: 10px;
     display: flex;
@@ -17,16 +18,56 @@ body {
 
 form label {
     margin-right: 10px;
-    color: #ffffff;
+
 }
 
 select {
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ECDFCC;
 }
 
 .top-bar form {
     display: flex;
     align-items: center;
+}
+
+
+.full-size {
+    margin-top: 15px;
+    width: 100%;
+    border: solid 1px #ECDFCC;
+    box-sizing: border-box;
+    /* Para incluir el borde en el tamaño total */
+}
+
+.libre {
+   
+    height: 60px;
+    width: 80px;
+    margin: 2px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+}
+
+
+.cubiculo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #526D82;
+    height: 60px;
+    width: 80px;
+    margin: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cubiculo:hover {
+    box-shadow: 0 0 2px 2px #DDE6ED;
 }
