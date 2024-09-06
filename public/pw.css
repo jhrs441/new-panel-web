@@ -35,8 +35,9 @@ select {
 
 .full-size {
     margin-top: 15px;
+    margin-bottom: 15px;
     width: 100%;
-    border: solid 1px #ECDFCC;
+    /* border: solid 1px #ECDFCC; */
     box-sizing: border-box;
     /* Para incluir el borde en el tamaño total */
 }

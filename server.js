@@ -84,6 +84,24 @@ app.put('/update-losa', (req, res) => {
     });
 });
 
+app.get('/lista-areas-json', (req, res) => {
+    const dataDir = path.join(process.cwd(), 'datos');
+
+    fs.readdir(dataDir, (err, files) => {
+        if (err) {
+            return res.status(500).send('Error al leer la carpeta de datos');
+        }
+
+        const areas = files.map(file => {
+            const filePath = path.join(dataDir, file);
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            return { fileName: file, area: data.area };
+        });
+
+        res.json(areas);
+    });
+});
+
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

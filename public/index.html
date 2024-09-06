@@ -13,142 +13,21 @@
         <form>
             <label for="areas">Area:</label>
             <select id="areas" name="areas" onchange="checkOption()">
-                <option value="Callcenter">Callcenter</option>
-                <option value="Afiliaciones y cartera">Afiliaciones y cartera</option>
-                <option value="Atencion al afiliado">Atencion al afiliado</option>
-                <option value="Contabilidad">Contabilidad</option>
-                <option value="mas">agregar area +</option>
+                <!-- <option value="NombreArchivo">Nombre areas</option> -->
             </select>
         </form>
+        <p style="margin: 0;">Almacen</p>
         <button onclick="updateLosa()">Actualizar Losa</button>
     </div>
 
     <div id="contenedor_losas" class="full-size">
-        <!-- <div class="fila">
-            <div id="l1" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l2" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l3" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l4" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l5" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l6" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l7" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l8" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l9" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l10" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l11" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l12" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l13" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l14" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l15" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-        </div>
-        <div class="fila">
-            <div id="l1" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l2" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l3" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l4" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l5" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l6" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l7" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l8" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l9" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l10" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l11" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l12" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l13" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l14" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-            <div id="l15" class="cubiculo" data-estado="0" data-eq="" data-mac=""></div>
-        </div> -->
-
+       <!-- losas creadas desde codigo de javascrip -->
     </div>
 
     <script src="pw.js"></script>
     <script>
 
-        function checkOption() {
-            const select = document.getElementById('areas');
-            if (select.value === 'mas') {
-                const fileName = prompt('Introduce el nombre del archivo:');
-                const area = prompt('Introduce el área:');
-                const total_losas = prompt('Introduce el total de losas (espacio)');
-
-                if (fileName && area && total_losas) {
-                    const data = {
-                        fileName,
-                        area,
-                        total_losas: parseInt(total_losas, 10)
-                    };
-
-                    fetch('/create-file', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    })
-                        .then(response => response.text())
-                        .then(data => alert(data))
-                        .catch(error => console.error('Error:', error));
-                }
-            }
-        }
-
-        function updateLosa() {
-            const fileName = prompt('Introduce el nombre del archivo:');
-            const losa = prompt('Introduce la losa a actualizar (por ejemplo, l1, l2, etc.):');
-            const estado = prompt('Introduce el nuevo estado (opcional):');
-            const ip = prompt('Introduce la nueva IP (opcional):');
-            const MAC = prompt('Introduce la nueva MAC (opcional):');
-            const nombre_equipo = prompt('Introduce el nuevo nombre del equipo (opcional):');
-
-            const data = {
-                fileName,
-                losa
-            };
-
-            if (estado) data.estado = estado;
-            if (ip) data.ip = ip;
-            if (MAC) data.MAC = MAC;
-            if (nombre_equipo) data.nombre_equipo = nombre_equipo;
-
-            fetch('/update-losa', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => response.text())
-                .then(data => alert(data))
-                .catch(error => console.error('Error:', error));
-        }
-
-
-        function generarCubiculos() {
-            const contenedor = document.getElementById('contenedor_losas');
-
-            for (let i = 0; i < 20; i++) {
-                const fila = document.createElement('div');
-                fila.className = 'fila';
-
-                for (let j = 1; j <= 15; j++) {
-                    const cubiculo = document.createElement('div');
-                    cubiculo.id = `losa-${i * 15 + j}`;
-                    cubiculo.className = 'cubiculo';
-                    cubiculo.setAttribute('data-estado', '0');
-                    cubiculo.setAttribute('data-eq', '');
-                    cubiculo.setAttribute('data-mac', '');
-
-                    fila.appendChild(cubiculo);
-                }
-
-                contenedor.appendChild(fila);
-            }
-        }
-
-        // Llamar a la función para generar los cubículos
-        generarCubiculos();
-
-
+    
     </script>
 </body>
 
