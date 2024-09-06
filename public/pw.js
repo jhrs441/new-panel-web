@@ -3,7 +3,7 @@
 function checkOption() {
     const select = document.getElementById('areas');
     if (select.value === 'mas') {
-select.value = ''
+        select.value = ''
         const fileName = prompt('Introduce el nombre del archivo:');
         const area = prompt('Introduce el área:');
         const total_losas = prompt('Introduce el total de losas (espacio)');
@@ -27,6 +27,7 @@ select.value = ''
                 .catch(error => console.error('Error:', error));
         }
     }
+    obtenerDatosArchivo(select.value)
 }
 
 function updateLosa() {
@@ -62,7 +63,7 @@ function updateLosa() {
 
 function generarCubiculos(filas) {
     const contenedor = document.getElementById('contenedor_losas');
-
+    contenedor.innerHTML = '';
     for (let i = 0; i < filas; i++) {
         const fila = document.createElement('div');
         fila.className = 'fila';
@@ -102,6 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error:', error));
 });
 
+async function obtenerDatosArchivo(fileName) {
+    try {
+        const response = await fetch(`/datos-archivo-json?fileName=${fileName}`);
+        if (!response.ok) {
+            throw new Error('Error al obtener los datos');
+        }
+        const data = await response.json();
+        console.log('Datos del archivo:', data);
+        generarCubiculos(data.total_losas)
+        document.getElementById('titulo').textContent=data.area
+        // Aquí puedes manejar los datos como desees
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
 // Llamar a la función para generar los cubículos
-generarCubiculos(20);
+//generarCubiculos(20);
 

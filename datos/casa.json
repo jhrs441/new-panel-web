@@ -1,0 +1,83 @@
+{
+  "area": "Mi casa",
+  "total_losas": 15,
+  "losas": [
+    {
+      "losa-1": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-2": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-3": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-4": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-5": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-6": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-7": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-8": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-9": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-10": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-11": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-12": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-13": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-14": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-15": [
+        {
+          "estado": "0"
+        }
+      ]
+    }
+  ]
+}

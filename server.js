@@ -86,7 +86,6 @@ app.put('/update-losa', (req, res) => {
 
 app.get('/lista-areas-json', (req, res) => {
     const dataDir = path.join(process.cwd(), 'datos');
-
     fs.readdir(dataDir, (err, files) => {
         if (err) {
             return res.status(500).send('Error al leer la carpeta de datos');
@@ -99,6 +98,28 @@ app.get('/lista-areas-json', (req, res) => {
         });
 
         res.json(areas);
+    });
+});
+
+app.get('/datos-archivo-json', (req, res) => {
+    const { fileName } = req.query; // Obtener el nombre del archivo desde los parámetros de la URL
+    console.log(fileName);
+    const filePath = path.join(process.cwd(), 'datos', `${fileName}`);
+    console.log(filePath)
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            if (err.code === 'ENOENT') {
+                return res.status(404).send('Archivo no encontrado');
+            }
+            return res.status(500).send(`Error al leer el archivo: ${err.message}`);
+        }
+        try {
+            const jsonData = JSON.parse(data);
+            res.json(jsonData);
+        } catch (parseError) {
+            res.status(500).send(`Error al parsear el archivo JSON: ${parseError.message}`);
+        }
     });
 });
 
