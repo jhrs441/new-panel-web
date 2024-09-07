@@ -119,23 +119,7 @@ function cargarAreas() {
         .catch(error => console.error('Error:', error));
 }
 
-function option_defecto(select) {
-    // Agregar la opción "Seleccione un área"
-    const option = document.createElement('option');
-    option.value = '';
-    option.disabled = true;
-    option.selected = true;
-    option.textContent = 'Seleccione un área';
-    select.appendChild(option);
-}
 
-function option_agregar(select) {
-    // Agregar la opción "Agregar área +"
-    const option = document.createElement('option');
-    option.value = "mas";
-    option.textContent = "Agregar área +";
-    select.appendChild(option);
-}
 
 async function obtenerDatosArchivo(fileName) {
     try {
