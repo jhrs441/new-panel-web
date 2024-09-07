@@ -1,35 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Web</title>
     <link rel="stylesheet" href="pw.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="assets/js/color-modes.js"></script>
 </head>
 
 <body>
-    <div class="top-bar">
-        <form>
-            <label for="areas">Area:</label>
-            <select id="areas" name="areas" onchange="checkOption()">
-                <!-- <option value="NombreArchivo">Nombre areas</option> -->
-            </select>
-        </form>
-       
-            <h2 id="titulo" style="margin: 0;">sss</h2>
-        <button onclick="updateLosa()">Actualizar Losa</button>
-    </div>
 
-    <div id="contenedor_losas" class="full-size">
-       <!-- losas creadas desde codigo de javascrip -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" >Panel web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Listar areas
+                        </a>
+                        <ul class="dropdown-menu" id="areas-dropdown">
+                            <!-- Las opciones se llenarán dinámicamente -->
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Obciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" style="cursor: pointer;">Crear nueva area</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Tema
+                        </a>
+                        <ul class="dropdown-menu">
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="light" aria-pressed="false">
+                                Claro
+                            </button>
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="dark" aria-pressed="false">
+                                Oscuro
+                            </button>
+                            <!-- <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="auto" aria-pressed="false">
+                                Auto
+                            </button> -->
+                        </ul>
+                    </li>
+                </ul>
+
+                <span id="titulo" class="d-flex navbar-text fs-6 fw-bold">
+                    <!-- el nombre del area aparecerá aquí -->
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="contenedor_losas" class="container-fluid" style="margin-top: 65px;">
+        <!-- losas creadas desde codigo de javascrip -->
     </div>
 
     <script src="pw.js"></script>
-    <script>
-
-    
-    </script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

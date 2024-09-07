@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.post('/create-file', (req, res) => {
-    const { fileName, area, total_losas } = req.body;
+    const { fileName, area, filas } = req.body;
     const dataDir = path.join(process.cwd(), 'datos');
 
     // Verificar si la carpeta 'datos' existe, si no, crearla
@@ -23,13 +23,13 @@ app.post('/create-file', (req, res) => {
 
     // Crear losas automáticamente
     const losas = {};
-    for (let i = 1; i <= total_losas; i++) {
+    for (let i = 1; i <= 150; i++) {
         losas[`losa-${i}`] = [{ estado: "0" }];
     }
 
     const testData = {
         area,
-        total_losas: total_losas,
+        filas: filas,
         losas: [losas]
     };
 

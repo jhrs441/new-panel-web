@@ -5,45 +5,8 @@ body {
     color: #DDE6ED;
 }
 
-.top-bar {
-    background-color: #526D82;
-    overflow: hidden;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-form label {
-    margin-right: 10px;
-
-}
-
-select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ECDFCC;
-}
-
-.top-bar form {
-    display: flex;
-    align-items: center;
-}
-
-
-.full-size {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 100%;
-    /* border: solid 1px #ECDFCC; */
-    box-sizing: border-box;
-    /* Para incluir el borde en el tamaño total */
-}
-
 .libre {
-   
+
     height: 60px;
     width: 80px;
     margin: 2px;

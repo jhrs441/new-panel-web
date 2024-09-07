@@ -3,16 +3,16 @@
 function checkOption() {
     const select = document.getElementById('areas');
     if (select.value === 'mas') {
-        select.value = ''
+        //select.value = ''
         const fileName = prompt('Introduce el nombre del archivo:');
         const area = prompt('Introduce el área:');
-        const total_losas = prompt('Introduce el total de losas (espacio)');
+        const total_losas = "10"
 
         if (fileName && area && total_losas) {
             const data = {
                 fileName,
                 area,
-                total_losas: parseInt(total_losas, 10)
+                filas: parseInt(total_losas, 10)
             };
 
             fetch('/create-file', {
@@ -23,11 +23,19 @@ function checkOption() {
                 body: JSON.stringify(data)
             })
                 .then(response => response.text())
-                .then(data => alert(data))
+                .then(data => {
+                    alert(data);
+                    cargarAreas();
+                    obtenerDatosArchivo(fileName)
+
+                })
                 .catch(error => console.error('Error:', error));
         }
+    } else {
+        obtenerDatosArchivo(select.value)
     }
-    obtenerDatosArchivo(select.value)
+
+
 }
 
 function updateLosa() {
@@ -84,24 +92,50 @@ function generarCubiculos(filas) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    cargarAreas();
+});
+
+function cargarAreas() {
     fetch('/lista-areas-json')
         .then(response => response.json())
         .then(data => {
-            const select = document.getElementById('areas');
+            //const select = document.getElementById('areas');
+            const dropdown = document.getElementById('areas-dropdown');
+            //select.innerHTML = ''; // Limpiar las opciones existentes
+            //option_defecto(select);
+            console.log(data)
             data.forEach(item => {
-                const option = document.createElement('option');
-                option.value = item.fileName;
-                option.textContent = item.area;
-                select.appendChild(option);
+                const dropdownItem = document.createElement('li');
+                const dropdownLink = document.createElement('a');
+                dropdownLink.className = 'dropdown-item';
+                dropdownLink.textContent = item.area;
+                dropdownLink.style.cursor='pointer'
+                dropdownLink.setAttribute('onclick', `obtenerDatosArchivo('${item.fileName}')`);
+                dropdownItem.appendChild(dropdownLink);
+                dropdown.appendChild(dropdownItem);
             });
-            //se agrega <option value="mas">agregar area +</option>
-            const option = document.createElement('option');
-            option.value = "mas";
-            option.textContent = "Agregar area+";
-            select.appendChild(option);
+            //option_agregar(select);
         })
         .catch(error => console.error('Error:', error));
-});
+}
+
+function option_defecto(select) {
+    // Agregar la opción "Seleccione un área"
+    const option = document.createElement('option');
+    option.value = '';
+    option.disabled = true;
+    option.selected = true;
+    option.textContent = 'Seleccione un área';
+    select.appendChild(option);
+}
+
+function option_agregar(select) {
+    // Agregar la opción "Agregar área +"
+    const option = document.createElement('option');
+    option.value = "mas";
+    option.textContent = "Agregar área +";
+    select.appendChild(option);
+}
 
 async function obtenerDatosArchivo(fileName) {
     try {
@@ -111,11 +145,28 @@ async function obtenerDatosArchivo(fileName) {
         }
         const data = await response.json();
         console.log('Datos del archivo:', data);
-        generarCubiculos(data.total_losas)
-        document.getElementById('titulo').textContent=data.area
-        // Aquí puedes manejar los datos como desees
+        generarCubiculos(data.filas)
+        document.getElementById('titulo').textContent = data.area
+
     } catch (error) {
         console.error('Error:', error);
+    }
+}
+
+function toggleDropdown() {
+    document.getElementById("dropdown-content").classList.toggle("show");
+}
+
+// Cerrar el menú desplegable si el usuario hace clic fuera de él
+window.onclick = function (event) {
+    if (!event.target.matches('.dropdown button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
 }
 
