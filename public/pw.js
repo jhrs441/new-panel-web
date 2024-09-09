@@ -113,8 +113,13 @@ function generarCubiculos(filas, dato) {
                     cubiculo.setAttribute('data-ip', datos_losa.ip || '0.0.0.0');
                     cubiculo.setAttribute('data-mac', datos_losa.MAC || '00-00-00-00-00');
                     cubiculo.setAttribute('data-img', datos_losa.img || 'losa.png');
+                    //cubiculo.onclick = funcionPrueba(id);
                 }
             });
+            // Agregar evento onclick al cubículo
+            cubiculo.onclick = function () {
+                funcionPrueba(id);
+            };
 
             fila.appendChild(cubiculo); // Agregar cubículo a la fila
         }
@@ -122,6 +127,9 @@ function generarCubiculos(filas, dato) {
     }
 }
 
+function funcionPrueba(id) {
+    console.log(id)
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarListaAreas();
