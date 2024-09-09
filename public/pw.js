@@ -1,43 +1,4 @@
 
-
-// function checkOption() {
-//     const select = document.getElementById('areas');
-//     if (select.value === 'mas') {
-//         //select.value = ''
-//         const fileName = prompt('Introduce el nombre del archivo:');
-//         const area = prompt('Introduce el área:');
-//         const total_losas = "10"
-
-//         if (fileName && area && total_losas) {
-//             const data = {
-//                 fileName,
-//                 area,
-//                 filas: parseInt(total_losas, 10)
-//             };
-
-//             fetch('/create-file', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json'
-//                 },
-//                 body: JSON.stringify(data)
-//             })
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     alert(data);
-//                     cargarAreas();
-//                     obtenerDatosArchivo(fileName)
-
-//                 })
-//                 .catch(error => console.error('Error:', error));
-//         }
-//     } else {
-//         obtenerDatosArchivo(select.value)
-//     }
-
-
-// }
-
 function ejecutarObciones(obcion) {
     switch (obcion) {
         case "crear":
@@ -67,7 +28,7 @@ function crearArea() {
     const area = prompt('Introduce el área:');
     const total_losas = "10"
 
-    if (fileName && area && total_losas) {
+    if (fileName && area) {
         const data = {
             fileName,
             area,
@@ -83,10 +44,10 @@ function crearArea() {
         })
             .then(response => response.text())
             .then(data => {
-                //alert(data);
+                alert(data);
                 console.log(data)
-                cargarAreas();
-                //obtenerDatosArchivo(fileName)
+                cargarListaAreas();
+
 
             })
             .catch(error => console.error('Error:', error));
@@ -125,40 +86,77 @@ function updateLosa() {
 }
 
 
-function generarCubiculos(filas) {
+// function generarCubiculos(filas) {
+//     const contenedor = document.getElementById('contenedor_losas');
+//     contenedor.innerHTML = '';
+//     for (let i = 0; i < filas; i++) {
+//         const fila = document.createElement('div');
+//         fila.className = 'fila';
+
+//         for (let j = 1; j <= 15; j++) {
+//             const cubiculo = document.createElement('div');
+//             cubiculo.id = `losa-${i * 15 + j}`;
+//             cubiculo.className = 'cubiculo';
+//             cubiculo.setAttribute('data-estado', '0');
+//             cubiculo.setAttribute('data-eq', '');
+//             cubiculo.setAttribute('data-mac', '');
+
+//             fila.appendChild(cubiculo);
+//         }
+
+//         contenedor.appendChild(fila);
+//     }
+// }
+
+function generarCubiculos(filas, dato) {
+    // Obtener el contenedor donde se agregarán los cubículos
     const contenedor = document.getElementById('contenedor_losas');
-    contenedor.innerHTML = '';
+    contenedor.innerHTML = ''; // Limpiar el contenedor
+
+    // Crear las filas de cubículos
     for (let i = 0; i < filas; i++) {
         const fila = document.createElement('div');
-        fila.className = 'fila';
+        fila.className = 'fila'; // Asignar clase para estilos
 
+        // Crear los cubículos dentro de cada fila
         for (let j = 1; j <= 15; j++) {
             const cubiculo = document.createElement('div');
-            cubiculo.id = `losa-${i * 15 + j}`;
-            cubiculo.className = 'cubiculo';
-            cubiculo.setAttribute('data-estado', '0');
-            cubiculo.setAttribute('data-eq', '');
-            cubiculo.setAttribute('data-mac', '');
+            const id = `losa-${i * 15 + j}`; // Generar ID único para cada cubículo
+            cubiculo.id = id;
+            cubiculo.className = 'cubiculo'; // Asignar clase para estilos
 
-            fila.appendChild(cubiculo);
+            // Actualizar cubículo si hay datos disponibles
+            dato.losas.forEach(losa => {
+                const datos_losa = losa[id]?.[0]; // Obtener datos del cubículo si existen
+                if (datos_losa) {
+                    // Establecer atributos del cubículo con los datos o valores por defecto
+                    cubiculo.setAttribute('data-estado', datos_losa.estado || '0');
+                    cubiculo.setAttribute('data-eq', datos_losa.nombre_equipo || 'NULL');
+                    cubiculo.setAttribute('data-ip', datos_losa.ip || '0.0.0.0');
+                    cubiculo.setAttribute('data-mac', datos_losa.MAC || '00-00-00-00-00');
+                    cubiculo.setAttribute('data-img', datos_losa.img || 'losa.png');
+                }
+            });
+
+            fila.appendChild(cubiculo); // Agregar cubículo a la fila
         }
-
-        contenedor.appendChild(fila);
+        contenedor.appendChild(fila); // Agregar fila al contenedor
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
-    cargarAreas();
+    cargarListaAreas();
     //console.log('se cargo de nuevo el DOM')
 });
 
-function cargarAreas() {
+function cargarListaAreas() {
     fetch('/lista-areas-json')
         .then(response => response.json())
         .then(data => {
             const dropdown = document.getElementById('areas-dropdown');
-            dropdown.innerHTML = ''; 
-           
+            dropdown.innerHTML = '';
+
             console.log(data)
             data.forEach(item => {
                 const dropdownItem = document.createElement('li');
@@ -184,7 +182,7 @@ async function obtenerDatosArchivo(fileName) {
         }
         const data = await response.json();
         console.log('Datos del archivo:', data);
-        generarCubiculos(data.filas)
+        generarCubiculos(data.filas, data)
         document.getElementById('titulo').textContent = data.area
 
     } catch (error) {

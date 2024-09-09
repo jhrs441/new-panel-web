@@ -1,0 +1,116 @@
+{
+  "area": "Mi area",
+  "filas": 10,
+  "losas": [
+    {
+      "losa-1": [
+        {
+          "estado": "1",
+          "ip": "10.10.100.1",
+          "MAC": "0A-00-27-00-00-08",
+          "nombre_equipo": "EQ01",
+          "img": ""
+        }
+      ],
+      "losa-2": [
+        {
+          "estado": "2",
+          "ip": "10.10.100.2",
+          "MAC": "0A-00-27-00-00-09",
+          "nombre_equipo": "EQ02",
+          "img": ""
+        }
+      ],
+      "losa-3": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-4": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-5": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-6": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-7": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-8": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-9": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-10": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-11": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-12": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-13": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-14": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-15": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-16": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-17": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-18": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-19": [
+        {
+          "estado": "0"
+        }
+      ],
+      "losa-20": [
+        {
+          "estado": "0"
+        }
+      ]
+    }
+  ]
+}
