@@ -86,28 +86,6 @@ function updateLosa() {
 }
 
 
-// function generarCubiculos(filas) {
-//     const contenedor = document.getElementById('contenedor_losas');
-//     contenedor.innerHTML = '';
-//     for (let i = 0; i < filas; i++) {
-//         const fila = document.createElement('div');
-//         fila.className = 'fila';
-
-//         for (let j = 1; j <= 15; j++) {
-//             const cubiculo = document.createElement('div');
-//             cubiculo.id = `losa-${i * 15 + j}`;
-//             cubiculo.className = 'cubiculo';
-//             cubiculo.setAttribute('data-estado', '0');
-//             cubiculo.setAttribute('data-eq', '');
-//             cubiculo.setAttribute('data-mac', '');
-
-//             fila.appendChild(cubiculo);
-//         }
-
-//         contenedor.appendChild(fila);
-//     }
-// }
-
 function generarCubiculos(filas, dato) {
     // Obtener el contenedor donde se agregarán los cubículos
     const contenedor = document.getElementById('contenedor_losas');
@@ -207,6 +185,4 @@ window.onclick = function (event) {
     }
 }
 
-// Llamar a la función para generar los cubículos
-//generarCubiculos(20);
 
