@@ -12,9 +12,11 @@
 
 <body>
 
+
+
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" >Panel web</a>
+            <a class="navbar-brand">Panel web</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +27,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Listar areas
+                            Mis areas
                         </a>
                         <ul class="dropdown-menu" id="areas-dropdown">
                             <!-- Las opciones se llenarán dinámicamente -->
@@ -39,7 +41,12 @@
                             Obciones
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" style="cursor: pointer;">Crear nueva area</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;"
+                                    onclick="ejecutarObciones('crear')">Crear nueva area</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;"
+                                    onclick="ejecutarObciones('eliminar')">Eliminar area actual</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;"
+                                    onclick="ejecutarObciones('duplicar')">Duplicar area actual</a></li>
                         </ul>
 
                     </li>

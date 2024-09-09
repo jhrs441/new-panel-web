@@ -1,42 +1,98 @@
 
 
-function checkOption() {
-    const select = document.getElementById('areas');
-    if (select.value === 'mas') {
-        //select.value = ''
-        const fileName = prompt('Introduce el nombre del archivo:');
-        const area = prompt('Introduce el área:');
-        const total_losas = "10"
+// function checkOption() {
+//     const select = document.getElementById('areas');
+//     if (select.value === 'mas') {
+//         //select.value = ''
+//         const fileName = prompt('Introduce el nombre del archivo:');
+//         const area = prompt('Introduce el área:');
+//         const total_losas = "10"
 
-        if (fileName && area && total_losas) {
-            const data = {
-                fileName,
-                area,
-                filas: parseInt(total_losas, 10)
-            };
+//         if (fileName && area && total_losas) {
+//             const data = {
+//                 fileName,
+//                 area,
+//                 filas: parseInt(total_losas, 10)
+//             };
 
-            fetch('/create-file', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => response.text())
-                .then(data => {
-                    alert(data);
-                    cargarAreas();
-                    obtenerDatosArchivo(fileName)
+//             fetch('/create-file', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json'
+//                 },
+//                 body: JSON.stringify(data)
+//             })
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     alert(data);
+//                     cargarAreas();
+//                     obtenerDatosArchivo(fileName)
 
-                })
-                .catch(error => console.error('Error:', error));
-        }
-    } else {
-        obtenerDatosArchivo(select.value)
+//                 })
+//                 .catch(error => console.error('Error:', error));
+//         }
+//     } else {
+//         obtenerDatosArchivo(select.value)
+//     }
+
+
+// }
+
+function ejecutarObciones(obcion) {
+    switch (obcion) {
+        case "crear":
+            crearArea()
+            break;
+
+        case "eliminar":
+            console.log('eliminar')
+
+            break;
+
+        case "duplicar":
+            console.log('duplicar')
+
+            break;
+        default:
+            console.log('por defecto')
+
+            break;
     }
-
-
 }
+
+
+function crearArea() {
+    console.log('crear')
+    const fileName = prompt('Introduce el nombre del archivo:');
+    const area = prompt('Introduce el área:');
+    const total_losas = "10"
+
+    if (fileName && area && total_losas) {
+        const data = {
+            fileName,
+            area,
+            filas: parseInt(total_losas, 10)
+        };
+
+        fetch('/create-file', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(data => {
+                //alert(data);
+                console.log(data)
+                cargarAreas();
+                //obtenerDatosArchivo(fileName)
+
+            })
+            .catch(error => console.error('Error:', error));
+    }
+}
+
 
 function updateLosa() {
     const fileName = prompt('Introduce el nombre del archivo:');
@@ -93,23 +149,23 @@ function generarCubiculos(filas) {
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarAreas();
+    //console.log('se cargo de nuevo el DOM')
 });
 
 function cargarAreas() {
     fetch('/lista-areas-json')
         .then(response => response.json())
         .then(data => {
-            //const select = document.getElementById('areas');
             const dropdown = document.getElementById('areas-dropdown');
-            //select.innerHTML = ''; // Limpiar las opciones existentes
-            //option_defecto(select);
+            dropdown.innerHTML = ''; 
+           
             console.log(data)
             data.forEach(item => {
                 const dropdownItem = document.createElement('li');
                 const dropdownLink = document.createElement('a');
                 dropdownLink.className = 'dropdown-item';
                 dropdownLink.textContent = item.area;
-                dropdownLink.style.cursor='pointer'
+                dropdownLink.style.cursor = 'pointer'
                 dropdownLink.setAttribute('onclick', `obtenerDatosArchivo('${item.fileName}')`);
                 dropdownItem.appendChild(dropdownLink);
                 dropdown.appendChild(dropdownItem);
@@ -118,7 +174,6 @@ function cargarAreas() {
         })
         .catch(error => console.error('Error:', error));
 }
-
 
 
 async function obtenerDatosArchivo(fileName) {
