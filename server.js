@@ -22,14 +22,16 @@ app.post('/create-file', (req, res) => {
     const filePath = path.join(dataDir, `${fileName}.json`);
 
     // Crear losas automáticamente
+    const cubos = filas * 15;
     const losas = {};
-    for (let i = 1; i <= 150; i++) {
+    for (let i = 1; i <= cubos; i++) {
         losas[`losa-${i}`] = [{ estado: "0" }];
     }
 
     const testData = {
         area,
         filas: filas,
+        losas: losas,
         losas: [losas]
     };
 
