@@ -33,7 +33,9 @@ body {
 }
 
 .cubiculo:hover {
-    box-shadow: 0 0 2px 2px #DDE6ED;
+    /* box-shadow: 0 0 2px 2px #DDE6ED; */
+    background-color: #6b6b6b75;
+
 }
 
 

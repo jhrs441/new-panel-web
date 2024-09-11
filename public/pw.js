@@ -14,10 +14,15 @@ function ejecutarObciones(obcion) {
             console.log('duplicar')
 
             break;
+        case "modoPC":
+            console.log('modoPC')
+
+            break;
         default:
             console.log('por defecto')
 
             break;
+
     }
 }
 
@@ -149,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contextMenu.style.display = 'block';
             // Obtener y mostrar el ID del cubículo
             const cubiculoId = cubiculo.id;
-           // console.log(rect.top + '-' + cubiculoId);
+            // console.log(rect.top + '-' + cubiculoId);
             const titleMenu = document.getElementById('title_menu');
             titleMenu.innerText = cubiculoId;
         }
@@ -158,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
         contextMenu.style.display = 'none';
     });
-    
+
 });
 
 document.addEventListener('DOMContentLoaded', () => {
