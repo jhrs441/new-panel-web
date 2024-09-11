@@ -84,6 +84,59 @@
         <!-- losas creadas desde codigo de javascrip -->
     </div>
 
+
+    <div id="context-menu" class="context-menu">
+        <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid #999999;">
+            <p id="title_menu" class="m-0"></p>
+            <button class="btn-close" aria-label="Close"></button>
+        </div>
+
+        <div  style="padding: 4px; border-bottom: 1px solid #999999;">
+            <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
+                <label for="teamName" style="font-size: 12px; ">Nombre de Equipo</label>
+                <input type="text" class="" id="" placeholder="...">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
+                <label for="teamName" style="font-size: 12px; ">Dirección IP</label>
+                <input type="text" class="" id="" placeholder="...">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
+                <label for="teamName" style="font-size: 12px; ">Dirección MAC</label>
+                <input type="text" class="" id="" placeholder="...">
+            </div>
+            <div class="form-group" style="display: flex; margin-bottom: 4PX; align-items: center;">
+                <label for="teamName" style="font-size: 12px; margin-right: 10px; ">Activar modo PC</label>
+                <input type="checkbox" class="" id="" placeholder="...">
+            </div>
+        </div>
+        
+
+        <div class="d-flex ">
+            <ul id="options-list" class="list-unstyled m-0 p-2">
+               
+                <li>Piso
+                    <ul class="submenu list-unstyled m-0 p-2">
+                        <li>Trasparente</li>
+                        <li>color 1</li>
+                    </ul>
+                </li>
+                <li>Puerta
+                    <ul class="submenu list-unstyled m-0 p-2">
+                        <li>metal</li>
+                        <li>madera</li>
+                    </ul>
+                </li>
+                <li>Otros
+                    <ul class="submenu list-unstyled m-0 p-2">
+                        <li>columna</li>
+                        <li>columna columna 2</li>
+                    </ul>
+                </li>
+                <li>Recetear losa</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="pw.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -106,6 +106,7 @@ function generarCubiculos(filas, dato) {
             // Actualizar cubículo si hay datos disponibles
             dato.losas.forEach(losa => {
                 const datos_losa = losa[id]?.[0]; // Obtener datos del cubículo si existen
+                //console.log(datos_losa)
                 if (datos_losa) {
                     // Establecer atributos del cubículo con los datos o valores por defecto
                     cubiculo.setAttribute('data-estado', datos_losa.estado || '0');
@@ -130,6 +131,35 @@ function generarCubiculos(filas, dato) {
 function funcionPrueba(id) {
     console.log(id)
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contenedor = document.getElementById('contenedor_losas');
+    const contextMenu = document.getElementById('context-menu');
+    const closeButton = contextMenu.querySelector('.btn-close');
+
+    contenedor.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        const cubiculo = event.target.closest('.cubiculo');
+        if (cubiculo) {
+            const rect = cubiculo.getBoundingClientRect();
+            const top = rect.top + 30;
+            const right = rect.right - 40;
+            contextMenu.style.top = `${top}px`;
+            contextMenu.style.left = `${right}px`;
+            contextMenu.style.display = 'block';
+            // Obtener y mostrar el ID del cubículo
+            const cubiculoId = cubiculo.id;
+           // console.log(rect.top + '-' + cubiculoId);
+            const titleMenu = document.getElementById('title_menu');
+            titleMenu.innerText = cubiculoId;
+        }
+    });
+
+    closeButton.addEventListener('click', () => {
+        contextMenu.style.display = 'none';
+    });
+    
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarListaAreas();
