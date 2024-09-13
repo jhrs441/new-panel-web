@@ -140,31 +140,69 @@ function funcionPrueba(id) {
 document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('contenedor_losas');
     const contextMenu = document.getElementById('context-menu');
+    const contextMenuHeader = document.getElementById('context-menu-header');
     const closeButton = contextMenu.querySelector('.btn-close');
 
-    contenedor.addEventListener('contextmenu', (event) => {
+    const showContextMenu = (event) => {
         event.preventDefault();
+        removeCubicleShadows();
         const cubiculo = event.target.closest('.cubiculo');
         if (cubiculo) {
             const rect = cubiculo.getBoundingClientRect();
-            const top = rect.top + 30;
-            const right = rect.right - 40;
-            contextMenu.style.top = `${top}px`;
-            contextMenu.style.left = `${right}px`;
+            contextMenu.style.top = `${rect.top + 30}px`;
+            contextMenu.style.left = `${rect.right - 40}px`;
             contextMenu.style.display = 'block';
-            // Obtener y mostrar el ID del cubículo
             const cubiculoId = cubiculo.id;
-            // console.log(rect.top + '-' + cubiculoId);
-            const titleMenu = document.getElementById('title_menu');
-            titleMenu.innerText = cubiculoId;
+            document.getElementById('title_menu').innerText = cubiculoId;
+            cubiculo.style.boxShadow = '0 0 5px orange';
         }
-    });
+    };
 
-    closeButton.addEventListener('click', () => {
+    const hideContextMenu = () => {
         contextMenu.style.display = 'none';
-    });
+        removeCubicleShadows();
+    };
 
+    const removeCubicleShadows = () => {
+        document.querySelectorAll('.cubiculo').forEach(cubiculo => {
+            cubiculo.style.boxShadow = 'none';
+        });
+    };
+
+    const dragElement = (element, header) => {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        header.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            element.style.top = (element.offsetTop - pos2) + "px";
+            element.style.left = (element.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    };
+
+    contenedor.addEventListener('contextmenu', showContextMenu);
+    closeButton.addEventListener('click', hideContextMenu);
+    dragElement(contextMenu, contextMenuHeader);
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarListaAreas();
