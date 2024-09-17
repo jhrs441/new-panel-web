@@ -23,18 +23,27 @@ app.post('/create-file', (req, res) => {
 
     // Crear losas automáticamente
     const cubos = filas * 15;
-    const losas = {};
+    const losas = [];
     for (let i = 1; i <= cubos; i++) {
-        losas[`losa-${i}`] = [{ estado: "0" }];
+        losas.push({
+            [`losa-${i}`]: [{
+                estado: "0",
+                ip: "",
+                MAC: "",
+                nombre_equipo: "",
+                tipo: "",
+                img1: "losa_central.png",
+                img2: "null",
+                img3: "null"
+            }]
+        });
     }
 
     const testData = {
         area,
-        filas: filas,
-        losas: losas,
-        losas: [losas]
+        filas,
+        losas
     };
-
 
     fs.writeFile(filePath, JSON.stringify(testData, null, 2), (err) => {
         if (err) {

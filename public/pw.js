@@ -92,46 +92,87 @@ function updateLosa() {
 
 
 function generarCubiculos(filas, dato) {
-    // Obtener el contenedor donde se agregarán los cubículos
     const contenedor = document.getElementById('contenedor_losas');
-    contenedor.innerHTML = ''; // Limpiar el contenedor
+    const url_img = 'http://localhost:3002/img/';
+    contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar los nuevos cubículos
+
+    // Función auxiliar para crear una imagen y establecer su fuente o clase
+    function crearImagen(id, imgSrc, defaultSrc) {
+        const img = document.createElement('img');
+        img.id = id;
+
+        // Si la imagen no es "null", asignar el src; de lo contrario, asignar una clase
+        if (imgSrc !== "null") {
+            img.src = url_img + imgSrc || defaultSrc;
+        } else {
+            img.className = 'img_null';
+        }
+        return img;
+    }
+
+    // Función para asignar atributos al cubículo
+    function asignarAtributosCubiculo(cubiculo, datos_losa) {
+        cubiculo.setAttribute('data-estado', datos_losa.estado || '0');
+        cubiculo.setAttribute('data-ip', datos_losa.ip || '0.0.0.0');
+        cubiculo.setAttribute('data-mac', datos_losa.MAC || '00-00-00-00-00');
+        cubiculo.setAttribute('data-eq', datos_losa.nombre_equipo || 'sin_nombre');
+        cubiculo.setAttribute('data-img-tipo', datos_losa.tipo || 'por_defecto');
+        cubiculo.setAttribute('data-img1', datos_losa.img1 || 'losa_central.png');
+        cubiculo.setAttribute('data-img2', datos_losa.img2 || 'sin_imagen');
+        cubiculo.setAttribute('data-img3', datos_losa.img3 || 'sin_imagen');
+    }
 
     // Crear las filas de cubículos
     for (let i = 0; i < filas; i++) {
         const fila = document.createElement('div');
-        fila.className = 'fila'; // Asignar clase para estilos
+        fila.className = 'fila'; // Clase para los estilos de la fila
 
-        // Crear los cubículos dentro de cada fila
+        // Crear cubículos en cada fila
         for (let j = 1; j <= 15; j++) {
+            const id = `losa-${i * 15 + j}`; // Generar un ID único para cada cubículo
             const cubiculo = document.createElement('div');
-            const id = `losa-${i * 15 + j}`; // Generar ID único para cada cubículo
             cubiculo.id = id;
-            cubiculo.className = 'cubiculo'; // Asignar clase para estilos
+            cubiculo.className = 'cubiculo'; // Clase para los estilos de cubículo
 
-            // Actualizar cubículo si hay datos disponibles
-            dato.losas.forEach(losa => {
-                const datos_losa = losa[id]?.[0]; // Obtener datos del cubículo si existen
-                //console.log(datos_losa)
-                if (datos_losa) {
-                    // Establecer atributos del cubículo con los datos o valores por defecto
-                    cubiculo.setAttribute('data-estado', datos_losa.estado || '0');
-                    cubiculo.setAttribute('data-eq', datos_losa.nombre_equipo || 'NULL');
-                    cubiculo.setAttribute('data-ip', datos_losa.ip || '0.0.0.0');
-                    cubiculo.setAttribute('data-mac', datos_losa.MAC || '00-00-00-00-00');
-                    cubiculo.setAttribute('data-img', datos_losa.img || 'losa.png');
-                    //cubiculo.onclick = funcionPrueba(id);
-                }
-            });
+
+            // Crear contenedor para las imágenes
+            const contenedorImagenes = document.createElement('div');
+            contenedorImagenes.className = 'contenedor-imagenes';
+
+            // Buscar datos del cubículo en `dato.losas`
+            const losa = dato.losas.find(l => l[id]?.[0]);
+            if (losa) {
+                const datos_losa = losa[id][0];
+
+                // Asignar atributos del cubículo
+                asignarAtributosCubiculo(cubiculo, datos_losa);
+
+                // Crear y agregar las imágenes
+                const img1 = crearImagen(id + '_img1', datos_losa.img1, 'losa_central.png');
+                const img2 = crearImagen(id + '_img2', datos_losa.img2, 'sin_imagen.png');
+                const img3 = crearImagen(id + '_img3', datos_losa.img3, 'sin_imagen.png');
+
+                contenedorImagenes.appendChild(img1);
+                contenedorImagenes.appendChild(img2);
+                contenedorImagenes.appendChild(img3);
+            }
+
+            // Agregar el contenedor de imágenes al cubículo
+            cubiculo.appendChild(contenedorImagenes);
+
             // Agregar evento onclick al cubículo
             cubiculo.onclick = function () {
                 funcionPrueba(id);
             };
 
-            fila.appendChild(cubiculo); // Agregar cubículo a la fila
+
+            fila.appendChild(cubiculo); // Agregar el cubículo a la fila
         }
-        contenedor.appendChild(fila); // Agregar fila al contenedor
+        contenedor.appendChild(fila); // Agregar la fila completa al contenedor
     }
 }
+
+
 
 function funcionPrueba(id) {
     console.log(id)
@@ -154,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contextMenu.style.display = 'block';
             const cubiculoId = cubiculo.id;
             document.getElementById('title_menu').innerText = cubiculoId;
-            cubiculo.style.boxShadow = '0 0 5px orange';
+            cubiculo.classList.add('cubiculo_selec');
         }
     };
 
@@ -165,7 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const removeCubicleShadows = () => {
         document.querySelectorAll('.cubiculo').forEach(cubiculo => {
-            cubiculo.style.boxShadow = 'none';
+            //cubiculo.style.boxShadow = 'none';
+            cubiculo.classList.remove('cubiculo_selec');
+
         });
     };
 

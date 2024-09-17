@@ -5,110 +5,242 @@
     {
       "losa-1": [
         {
-          "estado": "1",
+          "estado": "activo",
           "ip": "10.10.100.1",
           "MAC": "0A-00-27-00-00-08",
           "nombre_equipo": "EQ01",
-          "img": ""
+          "tipo": "computadora",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-2": [
         {
-          "estado": "1",
+          "estado": "inactivo",
           "ip": "10.10.100.2",
           "MAC": "0A-00-27-00-00-09",
           "nombre_equipo": "EQ02",
-          "img": ""
+          "tipo": "computadora",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-3": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-4": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-5": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-6": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-7": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-8": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-9": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-10": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-11": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-12": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "silla_mirando_izquierda.png",
+          "img3": "null"
         }
       ],
       "losa-13": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "losa_central.png",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-14": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-15": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-16": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-17": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-18": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-19": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-20": [
         {
-          "estado": "0"
+          "estado": "0",
+          "ip": "",
+          "MAC": "",
+          "nombre_equipo": "",
+          "tipo": "",
+          "img1": "null",
+          "img2": "null",
+          "img3": "null"
         }
       ],
       "losa-21": [
