@@ -112,7 +112,8 @@ function generarCubiculos(filas, dato) {
 
     // Función para asignar atributos al cubículo
     function asignarAtributosCubiculo(cubiculo, datos_losa) {
-        cubiculo.setAttribute('data-estado', datos_losa.estado || '0');
+        cubiculo.setAttribute('data-estado', datos_losa.estado || 0);
+        //console.log(datos_losa.estado)
         cubiculo.setAttribute('data-ip', datos_losa.ip || '0.0.0.0');
         cubiculo.setAttribute('data-mac', datos_losa.MAC || '00-00-00-00-00');
         cubiculo.setAttribute('data-eq', datos_losa.nombre_equipo || 'sin_nombre');
@@ -181,8 +182,20 @@ function funcionPrueba(id) {
 document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('contenedor_losas');
     const contextMenu = document.getElementById('context-menu');
+    const checkbox = document.getElementById('check_box');
+    const direccionIP = document.getElementById('direccionIP');
+    const nombreEquipo = document.getElementById('nombreEquipo');
+    const mac = document.getElementById('mac');
+    const btnGuardarModoPc = document.getElementById('btnGuardarModoPc');
     const contextMenuHeader = document.getElementById('context-menu-header');
     const closeButton = contextMenu.querySelector('.btn-close');
+    const titulo = document.getElementById('title_menu');
+    const modoPC_div = document.getElementById('modoPC_div');
+    const modo_diseño_div = document.getElementById('modo_diseño_div');
+
+
+    // Declare variables to store data attributes
+    let cubiculoId, data_estado, data_ip, data_mac, data_eq, data_img_tipo, data_img1, data_img2, data_img3;
 
     const showContextMenu = (event) => {
         event.preventDefault();
@@ -193,11 +206,29 @@ document.addEventListener('DOMContentLoaded', () => {
             contextMenu.style.top = `${rect.top + 30}px`;
             contextMenu.style.left = `${rect.right - 40}px`;
             contextMenu.style.display = 'block';
-            const cubiculoId = cubiculo.id;
-            document.getElementById('title_menu').innerText = cubiculoId;
+            cubiculoId = cubiculo.id;
+            data_estado = cubiculo.getAttribute('data-estado');
+            data_ip = cubiculo.getAttribute('data-ip');
+            data_mac = cubiculo.getAttribute('data-mac');
+            data_eq = cubiculo.getAttribute('data-eq');
+            data_img_tipo = cubiculo.getAttribute('data-img-tipo');
+            data_img1 = cubiculo.getAttribute('data-img1');
+            data_img2 = cubiculo.getAttribute('data-img2');
+            data_img3 = cubiculo.getAttribute('data-img3');
+            titulo.textContent = cubiculoId;
             cubiculo.classList.add('cubiculo_selec');
+            checkbox.checked = data_estado === '1';
+            modos()
+            nombreEquipo.value = data_eq;
+            mac.value = data_mac;
+            direccionIP.value = data_ip;
+
+            console.log(cubiculoId, ' - ', data_eq, data_estado, data_img1, data_img2, data_img3, data_img_tipo);
         }
     };
+
+
+
 
     const hideContextMenu = () => {
         contextMenu.style.display = 'none';
@@ -206,11 +237,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const removeCubicleShadows = () => {
         document.querySelectorAll('.cubiculo').forEach(cubiculo => {
-            //cubiculo.style.boxShadow = 'none';
             cubiculo.classList.remove('cubiculo_selec');
-
         });
     };
+
+
+    // Update data-estado when checkbox is clicked
+    checkbox.addEventListener('click', () => {
+        const cubiculo = document.querySelector('.cubiculo_selec');
+        if (cubiculo) {
+            modos()
+        }
+    });
+
+
+    function modos() {
+        const newEstado = checkbox.checked ? '1' : '0';
+        if (newEstado === '1') {
+            console.log('VISIBLE')
+            modoPC_div.style.display = 'block'
+            modo_diseño_div.style.display = 'none'
+        } else {
+            console.log('INVICIBLE')
+            modoPC_div.style.display = 'none'
+            modo_diseño_div.style.display = 'block'
+
+        }
+    }
+
+
+    btnGuardarModoPc.addEventListener('click', () => {
+        cubiculoId = document.getElementById(cubiculoId);
+        //direccionIP
+        const newEstado = checkbox.checked ? '1' : '0';
+        cubiculoId.setAttribute('data-estado', newEstado);
+        cubiculoId.setAttribute('data-ip', newEstado);
+
+
+        console.log(newEstado);
+
+    });
 
     const dragElement = (element, header) => {
         let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

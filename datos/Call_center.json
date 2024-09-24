@@ -1,14 +1,14 @@
 {
-  "area": "Prueba 123",
+  "area": "Call Center",
   "filas": 10,
   "losas": [
     {
       "losa-1": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
-          "nombre_equipo": "",
+          "nombre_equipo": "EQ01",
           "tipo": "",
           "img1": "losa_central.png",
           "img2": "null",
@@ -19,10 +19,10 @@
     {
       "losa-2": [
         {
-          "estado": "0",
-          "ip": "",
+          "estado": 0,
+          "ip": "192.168.2.74",
           "MAC": "",
-          "nombre_equipo": "",
+          "nombre_equipo": "EQ02",
           "tipo": "",
           "img1": "losa_central.png",
           "img2": "null",
@@ -33,7 +33,7 @@
     {
       "losa-3": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -47,7 +47,7 @@
     {
       "losa-4": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -61,7 +61,7 @@
     {
       "losa-5": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -75,7 +75,7 @@
     {
       "losa-6": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -89,7 +89,7 @@
     {
       "losa-7": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -103,7 +103,7 @@
     {
       "losa-8": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -117,7 +117,7 @@
     {
       "losa-9": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -131,7 +131,7 @@
     {
       "losa-10": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -145,7 +145,7 @@
     {
       "losa-11": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -159,7 +159,7 @@
     {
       "losa-12": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -173,7 +173,7 @@
     {
       "losa-13": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -187,7 +187,7 @@
     {
       "losa-14": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -201,7 +201,7 @@
     {
       "losa-15": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -215,7 +215,7 @@
     {
       "losa-16": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -229,7 +229,7 @@
     {
       "losa-17": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -243,7 +243,7 @@
     {
       "losa-18": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -257,7 +257,7 @@
     {
       "losa-19": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -271,7 +271,7 @@
     {
       "losa-20": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -285,7 +285,7 @@
     {
       "losa-21": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -299,7 +299,7 @@
     {
       "losa-22": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -313,7 +313,7 @@
     {
       "losa-23": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -327,7 +327,7 @@
     {
       "losa-24": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -341,7 +341,7 @@
     {
       "losa-25": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -355,7 +355,7 @@
     {
       "losa-26": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -369,7 +369,7 @@
     {
       "losa-27": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -383,7 +383,7 @@
     {
       "losa-28": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -397,7 +397,7 @@
     {
       "losa-29": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -411,7 +411,7 @@
     {
       "losa-30": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -425,7 +425,7 @@
     {
       "losa-31": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -439,7 +439,7 @@
     {
       "losa-32": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -453,7 +453,7 @@
     {
       "losa-33": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -467,7 +467,7 @@
     {
       "losa-34": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -481,7 +481,7 @@
     {
       "losa-35": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -495,7 +495,7 @@
     {
       "losa-36": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -509,7 +509,7 @@
     {
       "losa-37": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -523,7 +523,7 @@
     {
       "losa-38": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -537,7 +537,7 @@
     {
       "losa-39": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -551,7 +551,7 @@
     {
       "losa-40": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -565,7 +565,7 @@
     {
       "losa-41": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -579,7 +579,7 @@
     {
       "losa-42": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -593,7 +593,7 @@
     {
       "losa-43": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -607,7 +607,7 @@
     {
       "losa-44": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -621,7 +621,7 @@
     {
       "losa-45": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -635,7 +635,7 @@
     {
       "losa-46": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -649,7 +649,7 @@
     {
       "losa-47": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -663,7 +663,7 @@
     {
       "losa-48": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -677,7 +677,7 @@
     {
       "losa-49": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -691,7 +691,7 @@
     {
       "losa-50": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -705,7 +705,7 @@
     {
       "losa-51": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -719,7 +719,7 @@
     {
       "losa-52": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -733,7 +733,7 @@
     {
       "losa-53": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -747,7 +747,7 @@
     {
       "losa-54": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -761,7 +761,7 @@
     {
       "losa-55": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -775,7 +775,7 @@
     {
       "losa-56": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -789,7 +789,7 @@
     {
       "losa-57": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -803,7 +803,7 @@
     {
       "losa-58": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -817,7 +817,7 @@
     {
       "losa-59": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -831,7 +831,7 @@
     {
       "losa-60": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -845,7 +845,7 @@
     {
       "losa-61": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -859,7 +859,7 @@
     {
       "losa-62": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -873,7 +873,7 @@
     {
       "losa-63": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -887,7 +887,7 @@
     {
       "losa-64": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -901,7 +901,7 @@
     {
       "losa-65": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -915,7 +915,7 @@
     {
       "losa-66": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -929,7 +929,7 @@
     {
       "losa-67": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -943,7 +943,7 @@
     {
       "losa-68": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -957,7 +957,7 @@
     {
       "losa-69": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -971,7 +971,7 @@
     {
       "losa-70": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -985,7 +985,7 @@
     {
       "losa-71": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -999,7 +999,7 @@
     {
       "losa-72": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1013,7 +1013,7 @@
     {
       "losa-73": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1027,7 +1027,7 @@
     {
       "losa-74": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1041,7 +1041,7 @@
     {
       "losa-75": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1055,7 +1055,7 @@
     {
       "losa-76": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1069,7 +1069,7 @@
     {
       "losa-77": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1083,7 +1083,7 @@
     {
       "losa-78": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1097,7 +1097,7 @@
     {
       "losa-79": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1111,7 +1111,7 @@
     {
       "losa-80": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1125,7 +1125,7 @@
     {
       "losa-81": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1139,7 +1139,7 @@
     {
       "losa-82": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1153,7 +1153,7 @@
     {
       "losa-83": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1167,7 +1167,7 @@
     {
       "losa-84": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1181,7 +1181,7 @@
     {
       "losa-85": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1195,7 +1195,7 @@
     {
       "losa-86": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1209,7 +1209,7 @@
     {
       "losa-87": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1223,7 +1223,7 @@
     {
       "losa-88": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1237,7 +1237,7 @@
     {
       "losa-89": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1251,7 +1251,7 @@
     {
       "losa-90": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1265,7 +1265,7 @@
     {
       "losa-91": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1279,7 +1279,7 @@
     {
       "losa-92": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1293,7 +1293,7 @@
     {
       "losa-93": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1307,7 +1307,7 @@
     {
       "losa-94": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1321,7 +1321,7 @@
     {
       "losa-95": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1335,7 +1335,7 @@
     {
       "losa-96": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1349,7 +1349,7 @@
     {
       "losa-97": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1363,7 +1363,7 @@
     {
       "losa-98": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1377,7 +1377,7 @@
     {
       "losa-99": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1391,7 +1391,7 @@
     {
       "losa-100": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1405,7 +1405,7 @@
     {
       "losa-101": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1419,7 +1419,7 @@
     {
       "losa-102": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1433,7 +1433,7 @@
     {
       "losa-103": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1447,7 +1447,7 @@
     {
       "losa-104": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1461,7 +1461,7 @@
     {
       "losa-105": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1475,7 +1475,7 @@
     {
       "losa-106": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1489,7 +1489,7 @@
     {
       "losa-107": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1503,7 +1503,7 @@
     {
       "losa-108": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1517,7 +1517,7 @@
     {
       "losa-109": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1531,7 +1531,7 @@
     {
       "losa-110": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1545,7 +1545,7 @@
     {
       "losa-111": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1559,7 +1559,7 @@
     {
       "losa-112": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1573,7 +1573,7 @@
     {
       "losa-113": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1587,7 +1587,7 @@
     {
       "losa-114": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1601,7 +1601,7 @@
     {
       "losa-115": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1615,7 +1615,7 @@
     {
       "losa-116": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1629,7 +1629,7 @@
     {
       "losa-117": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1643,7 +1643,7 @@
     {
       "losa-118": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1657,7 +1657,7 @@
     {
       "losa-119": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1671,7 +1671,7 @@
     {
       "losa-120": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1685,7 +1685,7 @@
     {
       "losa-121": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1699,7 +1699,7 @@
     {
       "losa-122": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1713,7 +1713,7 @@
     {
       "losa-123": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1727,7 +1727,7 @@
     {
       "losa-124": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1741,7 +1741,7 @@
     {
       "losa-125": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1755,7 +1755,7 @@
     {
       "losa-126": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1769,7 +1769,7 @@
     {
       "losa-127": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1783,7 +1783,7 @@
     {
       "losa-128": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1797,7 +1797,7 @@
     {
       "losa-129": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1811,7 +1811,7 @@
     {
       "losa-130": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1825,7 +1825,7 @@
     {
       "losa-131": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1839,7 +1839,7 @@
     {
       "losa-132": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1853,7 +1853,7 @@
     {
       "losa-133": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1867,7 +1867,7 @@
     {
       "losa-134": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1881,7 +1881,7 @@
     {
       "losa-135": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1895,7 +1895,7 @@
     {
       "losa-136": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1909,7 +1909,7 @@
     {
       "losa-137": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1923,7 +1923,7 @@
     {
       "losa-138": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1937,7 +1937,7 @@
     {
       "losa-139": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1951,7 +1951,7 @@
     {
       "losa-140": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1965,7 +1965,7 @@
     {
       "losa-141": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1979,7 +1979,7 @@
     {
       "losa-142": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -1993,7 +1993,7 @@
     {
       "losa-143": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2007,7 +2007,7 @@
     {
       "losa-144": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2021,7 +2021,7 @@
     {
       "losa-145": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2035,7 +2035,7 @@
     {
       "losa-146": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2049,7 +2049,7 @@
     {
       "losa-147": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2063,7 +2063,7 @@
     {
       "losa-148": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2077,7 +2077,7 @@
     {
       "losa-149": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",
@@ -2091,7 +2091,7 @@
     {
       "losa-150": [
         {
-          "estado": "0",
+          "estado": 0,
           "ip": "",
           "MAC": "",
           "nombre_equipo": "",

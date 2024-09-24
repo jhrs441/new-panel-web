@@ -92,25 +92,27 @@
         </div>
         <div class="form-group" style="display: flex; margin-left: 5PX; margin-top: 5PX; align-items: center; justify-content: flex-start;">
             <label for="teamName" style="font-size: 12px; margin-right: 10px; ">Modo PC</label>
-            <input type="checkbox" class="" id="" onclick="ejecutarObciones('modoPC')" placeholder="...">
+            <input type="checkbox" class="" id="check_box" onclick="ejecutarObciones('modoPC')" placeholder="...">
         </div>
-        <div style="padding: 4px;margin: 4px; border: 1px solid #999999;">
+        <div id="modoPC_div" style="padding: 4px;margin: 4px; border: 1px solid #999999;">
             <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
                 <label for="teamName" style="font-size: 12px; ">Nombre de Equipo</label>
-                <input type="text" class="" id="" placeholder="...">
+                <input type="text" class="" id="nombreEquipo" placeholder="...">
             </div>
             <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
-                <label for="teamName" style="font-size: 12px; ">Dirección IP</label>
-                <input type="text" class="" id="" placeholder="...">
+                <label  for="teamName" style="font-size: 12px; ">Dirección IP</label>
+                <input type="text" class="" id="direccionIP" placeholder="...">
             </div>
             <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 4PX;">
                 <label for="teamName" style="font-size: 12px; ">Dirección MAC</label>
-                <input type="text" class="" id="" placeholder="...">
+                <input type="text" class="" id="mac" placeholder="...">
             </div>
+            <button id="btnGuardarModoPc" style="font-size: 10px;">Guardar</button>
         </div>
         
 
-        <div class="d-flex ">
+
+        <div id="modo_diseño_div">
             <ul id="options-list" class="list-unstyled m-0 p-2">
                
                 <li>Piso

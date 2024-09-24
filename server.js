@@ -27,7 +27,7 @@ app.post('/create-file', (req, res) => {
     for (let i = 1; i <= cubos; i++) {
         losas.push({
             [`losa-${i}`]: [{
-                estado: "0",
+                estado: 0,
                 ip: "",
                 MAC: "",
                 nombre_equipo: "",
