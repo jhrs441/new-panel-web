@@ -268,10 +268,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnGuardarModoPc.addEventListener('click', () => {
         cubiculoId = document.getElementById(cubiculoId);
-        //direccionIP
+        
+       
         const newEstado = checkbox.checked ? '1' : '0';
         cubiculoId.setAttribute('data-estado', newEstado);
-        cubiculoId.setAttribute('data-ip', newEstado);
+
+        const newIP = direccionIP.value;
+        cubiculoId.setAttribute('data-ip', newIP);
+
+        const newNombreEquipo = nombreEquipo.value;
+        cubiculoId.setAttribute('data-eq', newNombreEquipo);
+
+        const newMAC = mac.value;
+        cubiculoId.setAttribute('data-mac', newMAC);
 
 
         console.log(newEstado);
